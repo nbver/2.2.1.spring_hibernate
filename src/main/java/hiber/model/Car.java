@@ -6,14 +6,17 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    @GeneratedValue
     private Long id;
     @Column
     private String model;
     @Column
     private int series;
 
-//    @OneToOne(mappedBy = "car")
+//    @OneToOne
+//    @MapsId
+//    @JoinColumn(name = "user_id")
 //    private User user;
 
     public Car(String model, int series) {
